@@ -18,7 +18,7 @@
   },
   "private": true,
   "scripts": {
-    "deploy": "npm run build && gh-pages -d web_deploy",
+    "deploy": "npm run build && deploy-to-gh-pages -d web_deploy",
     "build": "node ./scripts/build.js",
     "swagger": "swagger-repo",
     "test": "swagger-repo validate",
