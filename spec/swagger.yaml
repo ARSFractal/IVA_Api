@@ -47,13 +47,6 @@ paths:
       responses:
         '405':
           description: Invalid input
-securityDefinitions:
-  iva_auth:
-    type: basic
-  api_key:
-    type: apiKey
-    name: Authorization
-    in: header
 definitions:
   User:
     type: object
