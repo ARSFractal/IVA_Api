@@ -1,0 +1,93 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "This is a sample server IVA server.  You can find out more about     IVA at [https://fractal.ai/image-video-analytics/](https://fractal.ai/image-video-analytics/).  ",
+    "version": "1.0.0",
+    "title": "IVA Api",
+    "termsOfService": "https://medium.com/@rtaleanalyze/privacy-policy-for-rtale-fa030b4d6a9f",
+    "contact": {
+      "email": "dle@fractal.ai"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    },
+    "x-logo": {
+      "url": "https://iva.fractalanalytics.com/9cf4b3eb3df6821801207a7d4644d25f.png"
+    }
+  },
+  "host": "iva.fractalanalytics.com",
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "Login",
+      "description": "Login Endpoint for IVA"
+    },
+    {
+      "name": "Models",
+      "description": "IVA Models for custom solutions",
+      "externalDocs": {
+        "description": "Find out more",
+        "url": "https://fractal.ai/image-video-analytics/"
+      }
+    },
+    {
+      "name": "Upload",
+      "description": "Upload picture and get the results"
+    }
+  ],
+  "schemes": [
+    "https",
+    "http"
+  ],
+  "paths": {
+    "/login/api-token-auth/": {
+      "post": {
+        "tags": [
+          "Login"
+        ],
+        "summary": "Login endpoint for IVA",
+        "description": "Test",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Username and password of the user for login",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        ],
+        "responses": {
+          "405": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "User": {
+      "type": "object",
+      "properties": {
+        "username": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "externalDocs": {
+    "description": "Find out more about Swagger",
+    "url": "http://swagger.io"
+  }
+}
